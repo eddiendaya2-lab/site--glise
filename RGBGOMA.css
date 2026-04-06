@@ -1,0 +1,642 @@
+/* --- DESIGN SYSTEM --- */
+:root {
+    --primary: #091c2f;      /* Bleu nuit profond */
+    --accent: #d49a2f;       /* Doré mat professionnel */
+    --white: #ffffff;
+    --bg-light: #f4f6f8;
+    --text-dark: black;
+    --transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* --- BASES --- */
+*{ 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+body { 
+    font-family: 'Poppins', sans-serif; 
+    color: var(--text-dark); 
+    line-height: 1.7; 
+    scroll-behavior: smooth; }
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; 
+}
+
+/* --- HEADER & NAV --- */
+.main-header {
+    background: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 6%;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.site-logo {
+    height: 60px;
+    transition: var(--transition);
+}
+.logo-text {
+    font-weight: 700;
+    color: white;
+    font-size: 0.85rem;
+    line-height: 1.2;
+}
+.logo-text span {
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* --- HERO SECTION --- */
+.hero { 
+    height: 85vh; 
+    background: linear-gradient(rgba(15, 36, 57, 0.7),
+                                rgba(15, 36, 57, 0.7)),
+                                url('./IMG-20260315-WA0009.jpg')
+                                no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:  white;
+    background-attachment: fixed;
+}
+.hero h1 { 
+    font-size: 4rem; 
+    margin-bottom: 10px; 
+}
+.subtitle { 
+    font-size: 1.3rem; 
+    font-weight: 300; 
+    letter-spacing: 2px; 
+}
+
+/* --- SECTIONS --- */
+.section-padding {
+    padding: 100px 8%;
+ }
+.light-bg {
+     background-color: rgb(23, 23, 65); 
+    }
+.section-title { 
+    text-align: center;
+    font-size: 2.8rem; 
+    color: rgb(56, 41, 41); 
+    margin-bottom: 60px; 
+}
+.section-title-aa{ 
+    text-align: center;
+    font-size: 2.8rem; 
+    color: rgb(254, 251, 251); 
+    margin-bottom: 60px; 
+}
+.section-title.left { 
+    text-align: left; 
+    margin-bottom: 30px;
+    background-color: rgb(233, 233, 240);
+}
+
+/* QUI SOMMES-NOUS */
+.container-flex {
+     display: flex; 
+     gap: 60px; 
+     align-items: center; 
+     flex-wrap: wrap;
+}
+.about-text { 
+    flex: 1.2; 
+    min-width: 320px; 
+}
+.about-image {
+     flex: 0.8;
+     min-width: 320px;
+}
+.img-fluid {
+     width: 100%;
+     border-radius: 15px; 
+     box-shadow: 20px 20px 0 var(--accent); 
+}
+
+.container-flex {
+     display: flex; 
+     gap: 60px; 
+     align-items: center; 
+     flex-wrap: wrap;
+}
+.about-text { 
+    flex: 1.2; 
+    min-width: 320px; 
+}
+
+
+/* MÉDIA & SOCIAL */
+.media-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+.video-placeholder {
+    height: 350px;
+    background: #000;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.social-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.social-item {
+    background: var(--primary);
+    color: #fff;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    transition: var(--transition);
+}
+.social-item:hover {
+    background: var(--accent);
+    transform: translateX(10px);
+}
+
+/* GRILLES & CARTES (HOVER FLOW) */
+.grid-layout {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.hover-flow-card { 
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: var(--transition);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hover-flow-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.album-thumb {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.7s;
+}
+.hover-flow-card:hover .album-thumb {
+    transform: scale(1.1);
+}
+.card-info, .media-info {
+    padding: 25px; 
+    text-align: center;
+}
+
+/* TABLEAU DES HORAIRES */
+.table-wrapper {
+    overflow-x: auto;
+}
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.schedule-table th {
+    background: var(--primary);
+    color: #fff;
+    padding: 25px;
+    text-align: left;
+}
+.schedule-table td {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+ }
+.schedule-table tr:hover {
+    background-color: #d1cbcb;
+}
+
+/* --- CONTACT & FOOTER --- */
+.dark-section {
+    background: var(--primary);
+    color: #fff;
+}
+.map-placeholder {
+    height: 350px;
+    background: #222;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary { 
+    background: rgb(53, 202, 53);
+    color: #fff;
+    padding: 18px 45px;
+    border-radius: 50px; 
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition);
+    display: inline-block;
+}
+.btn-primary:hover {
+    background: var(--white);
+    color: var(--primary);
+    transform: scale(1.05);
+}
+
+.main-footer {
+    background: #08121d;
+    color: #556677;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .media-container {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* --- STYLES CONTACT & MAP --- */
+.dark-section {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.container-flex {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-text {
+    flex: 1;
+    min-width: 320px;
+}
+
+.contact-text p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.contact-cta {
+    margin-top: 30px;
+}
+
+/* Conteneur de la Carte */
+.map-container {
+    flex: 1.2;
+    min-width: 320px;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden; /* Pour que les coins de l'iframe soient arrondis */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 3px solid var(--accent); /* Un petit liseré doré pour le prestige */
+}
+
+.map-container iframe {
+    display: block;
+}
+
+/* HOVER FLOW SUR LA CARTE */
+.map-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    transition: var(--transition);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .container-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .section-title.left {
+        text-align: center;
+    }
+    .map-container {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* --- SECTION MÉDIA : COULEURS ORIGINALES --- */
+.section-subtitle {
+    text-align: center;
+    margin-top: -40px;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Couleurs Officielles */
+.youtube {
+    background-color: #FF0000;
+}
+.facebook {
+    background-color: #1877F2;
+}
+.tiktok {
+    background-color: #000000;
+}
+.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+}
+.twitter-x {
+    background-color: #000000; border: 1px solid #333;
+}
+
+.social-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    filter: brightness(1.1);
+}
+
+/* --- PIED DE PAGE DÉCORÉ (FOOTER) --- */
+.main-footer {
+    background-color: #0a1118; /* Bleu très sombre */
+    color: #d1d1d1;
+    padding-top: 60px;
+    position: relative;
+}
+
+.footer-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 0 8% 40px;
+    flex-wrap: wrap;
+}
+
+.footer-brand, .footer-links, .footer-contact {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo { 
+    height: 70px;
+    margin-bottom: 20px;
+    filter: brightness(1.2);
+}
+.footer-brand h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.footer-links h4, .footer-contact h4 {
+    color: var(--white);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-links h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent);
+}
+
+.footer-links ul { list-style: none; }
+.footer-links li { margin-bottom: 12px; }
+.footer-links a { 
+    text-decoration: none; 
+    color: #aaa; 
+    transition: var(--transition); 
+}
+.footer-links a:hover { color: var(--accent); padding-left: 10px; }
+
+.footer-copyright {
+    background-color: #050a0f;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    border-top: 1px solid #1a252f;
+}
+
+/* --- GESTION DE LA DIFFUSION EN DIRECT --- */
+.media-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.live-broadcast {
+    flex: 1.5;
+    min-width: 320px;
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.video-frame {
+    height: 300px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('fond-video.jpg') no-repeat center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.live-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #FF0000;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.play-btn {
+    width: 70px;
+    height: 70px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+.live-info {
+    padding: 25px;
+}
+
+.live-info h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* --- ADAPTATION DES RÉSEAUX À CÔTÉ --- */
+.social-wrapper {
+    flex: 1;
+    min-width: 280px;
+}
+
+.social-wrapper h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Les couleurs originales restent les mêmes que l'étape précédente */
+
+/* GESTION DES DEUX COLONNES POUR LES COORDONNÉES */
+.coordonnees-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; /* Pour que ça reste lisible sur téléphone */
+}
+
+.col-coord {
+    flex: 1;
+    min-width: 300px; /* Taille minimum pour chaque colonne */
+}
+
+.col-coord h4 {
+    margin-top: 20px;
+    color: var(--accent); /* Utilise votre couleur dorée */
+}
+
+.col-coord p {
+    margin-bottom: 5px;
+}
+
+/* Infos Client */
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.client-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #2563eb;
+    object-fit: cover;
+}
+
+.client-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.client-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.client-status {
+    font-size: 12px;
+    color: #64748b; /* Gris bleuté */
+    letter-spacing: 1px;
+    margin-top: 4px;
+}
